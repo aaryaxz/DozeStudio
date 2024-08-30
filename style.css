@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: UncutSans-Light;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: UncutSans-Light;
+    src: url(Assets/Fonts/UncutSans-Light.woff2);
+}
+@font-face {
+    font-family: UncutSans-Medium;
+    src: url(Assets/Fonts/UncutSans-Medium.woff2);
+}
+@font-face {
+    font-family: UncutSans-Regular;
+    src: url(Assets/Fonts/UncutSans-Regular.woff2);
+} 
+@font-face {
+    font-family: UncutSans-SemiBold;
+    src: url(Assets/Fonts/UncutSans-Semibold.woff2);
+}
+
+#main {
+    width: 100%;
+    background-color: black;
+    
+}
+
+#parent {
+    position: relative;
+    width: 100%;
+    height: 2000vh;
+}
+
+#child {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+#canvas{
+    height: 100%;
+    width: 100%;
+}
+/* Text1 */
+#text1{
+    position: absolute;
+    width: 50%;
+    top: 77%;
+    left: 3.5%;
+    z-index: 2;
+}
+#text1 h1{
+    text-transform: uppercase;
+    font-size: 2.4vw;
+    color: white;
+}
+#text1 #heading1{
+    font-weight: 200;
+}
+#text1 #heading2{
+    font-weight: 800;
+}
+
+/* Text2 */
+
+#text2{
+    position: absolute;
+    right: 3%;
+    bottom: 2.8%;
+    height: 30%;
+    width: 50%;
+    display: flex;
+    z-index: 2;
+    opacity: 0;
+}
+#text2 #part1 {
+    text-align: right;
+    font-size: 2vw;
+}
+#part1 h1{
+    text-transform: uppercase;
+    font-weight: 200;
+
+}
+#text2 #part2{
+    text-align: right;
+}
+#part2 p{
+    font-size: 1.8vw;
+    font-weight: 200;
+}
+#text2 h1,p{
+    color: white;
+}
+
+/* Text3 */
+
+#text3{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+#text3 h1{
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 4.5vw;
+    letter-spacing: 0.8px;
+}
+#text3 p{
+    font-size: 1.5vw;
+    font-family: UncutSans-Regular;
+    letter-spacing: 0.8px;
+    line-height: 2.2vw;
+    margin-top: 1vh;
+}
+
+/* Text4 */
+
+#text4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    height: 100vh;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.7vw  3vw;
+    z-index: 2;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+#text4 .parts p{
+    margin: 1.5vw 0vw;
+
+}
+#text4 #part1 h1{
+    color: rgb(90, 90, 90);
+    font-size: 23px;
+    font-weight: 200;
+}
+#text4 #part1 p{
+    color: black;
+    font-weight: 600;
+    font-size: 1.2vw;
+    font-family: UncutSans-SemiBold ;
+}
+#text4 #part1 button{
+    border: 1px solid rgb(97, 97, 97);
+    background-color: white;
+    padding: 12px 15px;
+    font-size:16px;
+    color: rgb(99, 99, 99);
+    font-family: UncutSans-Light;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+#text4 #part1 button:hover{
+    background-color: black;
+    color: white;
+}
+#text4 #part2 h1{
+    font-size: 1.4vw;
+    font-family: UncutSans-SemiBold ;
+}
+#text4 #part2 p{
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    font-family: UncutSans-SemiBold;
+}
+#text4 #part2 button{
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* Panelism(Text5) */
+
+#panelism{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    text-align: center;
+    color: white;
+    opacity: 0;
+}
+#panelism h1{
+    font-size: 4vw;
+    font-family: UncutSans-Semibold;
+}
+#panelism #line{
+    display: inline-block;
+    background-color: white;
+    width: 1%;
+    height: 6px;
+}
+
+/* Responsiveness */
