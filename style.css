@@ -63,7 +63,7 @@ body {
 }
 #text1 h1{
     text-transform: uppercase;
-    font-size: 2.4vw;
+    font-size: clamp(20px,2.4vw,45px);
     color: white;
 }
 #text1 #heading1{
@@ -78,28 +78,33 @@ body {
 #text2{
     position: absolute;
     right: 3%;
-    bottom: 2.8%;
-    height: 30%;
+    bottom: 0%;
+    height: 25%;
     width: 50%;
     display: flex;
     z-index: 2;
     opacity: 0;
+    /* background-color: blue; */
+    gap: 3vw;
 }
 #text2 #part1 {
     text-align: right;
-    font-size: 2vw;
+    font-size: clamp(13px,2vw,35px);
 }
-#part1 h1{
+#text2 #part1 h1{
     text-transform: uppercase;
     font-weight: 200;
 
 }
 #text2 #part2{
     text-align: right;
+    width: 50%;
+    /* background-color: red; */
 }
 #part2 p{
-    font-size: 1.8vw;
+    font-size: clamp(17px,1.8vw,26px);
     font-weight: 200;
+    /* background-color: blue; */
 }
 #text2 h1,p{
     color: white;
@@ -109,6 +114,7 @@ body {
 
 #text3{
     width: 60%;
+    /* width: 100%; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -116,18 +122,20 @@ body {
     text-align: center;
     color: white;
     opacity: 0;
+    /* background-color: red; */
 }
 #text3 h1{
     text-transform: uppercase;
     font-weight: 200;
-    font-size: 4.5vw;
+    font-size: clamp(30px,4.1vw,75px);
     letter-spacing: 0.8px;
 }
 #text3 p{
-    font-size: 1.5vw;
+
+    font-size: clamp(16px,1.5vw,26px);
     font-family: UncutSans-Regular;
     letter-spacing: 0.8px;
-    line-height: 2.2vw;
+    line-height: 1.7vw;
     margin-top: 1vh;
 }
 
@@ -143,7 +151,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2.7vw  3vw;
+    padding: 2.2vw  2.5vw;
     z-index: 2;
     transform: translateX(100%);
     opacity: 0;
@@ -155,20 +163,20 @@ body {
 }
 #text4 #part1 h1{
     color: rgb(90, 90, 90);
-    font-size: 23px;
+    font-size: clamp(20px,1.5vw,25px);
     font-weight: 200;
 }
 #text4 #part1 p{
     color: black;
     font-weight: 600;
-    font-size: 1.2vw;
+    font-size: clamp(14px,1.2vw,20px);
     font-family: UncutSans-SemiBold ;
 }
 #text4 #part1 button{
     border: 1px solid rgb(97, 97, 97);
     background-color: white;
-    padding: 12px 15px;
-    font-size:16px;
+    padding: 12px 14px;
+    font-size: clamp(13px,1vw,16px);
     color: rgb(99, 99, 99);
     font-family: UncutSans-Light;
     cursor: pointer;
@@ -179,20 +187,22 @@ body {
     color: white;
 }
 #text4 #part2 h1{
-    font-size: 1.4vw;
+    font-size: clamp(23px,1.4vw,23px);
     font-family: UncutSans-SemiBold ;
 }
 #text4 #part2 p{
-    font-size: 12px;
+    font-size: 13px;
     color: rgb(0, 0, 0);
     font-family: UncutSans-SemiBold;
 }
 #text4 #part2 button{
     border: none;
-    padding: 12px 20px;
+    padding: 10px 15px;
     color: white;
     background-color: black;
+    margin-top: 10px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 /* Panelism(Text5) */
@@ -219,3 +229,88 @@ body {
 }
 
 /* Responsiveness */
+
+@media (max-width:768px) {
+    #text1{
+        width: 100%;
+        top: 85%;
+    }
+    #text2{
+        bottom: -5%;
+        gap: 30px;
+        width: 90%;
+
+    }
+    #text2  #part1{
+        margin-top: 20px;
+    }
+    
+    #text2 #part2{
+        /* background-color: red; */
+        width: 100%;
+    }
+    #text3{
+        width: 100%;
+    }
+    #text3 p{
+        letter-spacing: 0px;
+        line-height: 17px;
+        margin-top: 0.3vh;
+    }
+    #text4 {    
+        width: 75%;
+        padding: 4vw  5vw;
+    }
+
+    #text4 #part1 button{
+        padding: 12px 14px;
+    }
+    #text4 #part1 p{
+       margin-top: 10px;
+       margin-bottom: 20px;
+    }
+    #text4 #part2 p{
+        margin-top: 15px;
+    }
+    #panelism{
+        width: 60%;
+    }
+    #panelism h1{
+        font-size: 4.5vw;
+    }
+    #panelism #line{
+        height: 0.5vw;
+    }
+    
+    
+    
+}
+@media (min-width:1800px) {
+    #text2 #part2{
+        width: 35%;
+    }
+    #text3{
+        width: 55%;
+    }
+    #text3 h1{
+        line-height: 57px;
+        letter-spacing: 0px;
+    }
+    #text3 p{
+        line-height: 35px;
+    }
+    #text4 {
+       width: 33%;
+    }
+    #text4 #part1 button{
+        padding: 14px 20px;
+    }
+    #text4 #part2 p{
+        font-size: 19px;
+        margin: 15px 0px ;
+    }
+    #text4 #part2  button{
+        padding: 15px 22px;
+    }
+   
+}
