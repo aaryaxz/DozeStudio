@@ -9,29 +9,136 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background-color: red;
 }
+
 
 @font-face {
     font-family: UncutSans-Light;
     src: url(Assets/Fonts/UncutSans-Light.woff2);
 }
+
 @font-face {
     font-family: UncutSans-Medium;
     src: url(Assets/Fonts/UncutSans-Medium.woff2);
 }
+
 @font-face {
     font-family: UncutSans-Regular;
     src: url(Assets/Fonts/UncutSans-Regular.woff2);
-} 
+}
+
 @font-face {
     font-family: UncutSans-SemiBold;
     src: url(Assets/Fonts/UncutSans-Semibold.woff2);
+}
+#cursor{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    z-index: 100;
+    transform: scale(1);
+    pointer-events: none;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.8vw 3.2vw;
+    mix-blend-mode: difference;
+    z-index: 10;
+    opacity: 1;
+    color: white;
+}
+
+nav .parts {
+    opacity: 1;
+    /* background-color: red; */
+    
+}
+
+nav #part1 {
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 1vw, 20px);
+}
+
+nav #part1 #circle {
+
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: clamp(13px, 1.1vw, 27px);
+    height: clamp(13px, 1.1vw, 27px);
+}
+
+nav #part1 h1 {
+    letter-spacing: 0.8px;
+    font-size: clamp(20px, 1.5vw, 30px);
+    font-weight: 200;
+}
+
+
+nav #part1 span {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    height: 1.5px;
+
+    width: clamp(19px, 1.3vw, 28px);
+    margin-bottom: clamp(4px, 0.4vw, 10px);
+    margin-right: clamp(8px, 0.8vw, 10px);
+}
+
+nav #part2 {
+    /* background-color: blue; */
+    width: 30%;
+}
+
+nav #part2 a {
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+    font-size: 20px;
+    font-size: 1.3vw;
+    /* background-color: red; */
+    margin-left: 3px;
+    cursor:none;
+}
+
+
+nav #part3 {
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    /* align-items: end; */
+    gap: 1.3vw;
+}
+
+nav #part3 h1 {
+    font-size: 1.3vw;
+    font-weight: 200;
+}
+
+nav #part3 span {
+    font-size: clamp(10px, 0.9vw, 17px);
+    font-family: UncutSans-Semibold;
+}
+
+nav #part4 {
+    display: none;
 }
 
 #main {
     width: 100%;
     background-color: black;
-    
 }
 
 #parent {
@@ -49,33 +156,38 @@ body {
     overflow: hidden;
 
 }
-#canvas{
+
+#canvas {
     height: 100%;
     width: 100%;
 }
+
 /* Text1 */
-#text1{
+#text1 {
     position: absolute;
     width: 50%;
     top: 77%;
     left: 3.5%;
     z-index: 2;
 }
-#text1 h1{
+
+#text1 h1 {
     text-transform: uppercase;
-    font-size: clamp(20px,2.4vw,45px);
+    font-size: clamp(20px, 2.4vw, 45px);
     color: white;
 }
-#text1 #heading1{
+
+#text1 #heading1 {
     font-weight: 200;
 }
-#text1 #heading2{
+
+#text1 #heading2 {
     font-weight: 800;
 }
 
 /* Text2 */
 
-#text2{
+#text2 {
     position: absolute;
     right: 3%;
     bottom: 0%;
@@ -87,52 +199,60 @@ body {
     /* background-color: blue; */
     gap: 3vw;
 }
+
 #text2 #part1 {
     text-align: right;
-    font-size: clamp(13px,2vw,35px);
+    font-size: clamp(13px, 2vw, 35px);
 }
-#text2 #part1 h1{
+
+#text2 #part1 h1 {
     text-transform: uppercase;
     font-weight: 200;
 
 }
-#text2 #part2{
+
+#text2 #part2 {
     text-align: right;
     width: 50%;
     /* background-color: red; */
 }
-#part2 p{
-    font-size: clamp(17px,1.8vw,26px);
+
+#part2 p {
+    font-size: clamp(17px, 1.8vw, 26px);
     font-weight: 200;
     /* background-color: blue; */
 }
-#text2 h1,p{
+
+#text2 h1,
+p {
     color: white;
 }
 
 /* Text3 */
 
-#text3{
+#text3 {
     width: 60%;
     /* width: 100%; */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     opacity: 0;
     /* background-color: red; */
 }
-#text3 h1{
+
+#text3 h1 {
     text-transform: uppercase;
     font-weight: 200;
-    font-size: clamp(30px,4.1vw,75px);
+    font-size: clamp(30px, 4.1vw, 75px);
     letter-spacing: 0.8px;
 }
-#text3 p{
 
-    font-size: clamp(16px,1.5vw,26px);
+#text3 p {
+
+    font-size: clamp(16px, 1.5vw, 26px);
     font-family: UncutSans-Regular;
     letter-spacing: 0.8px;
     line-height: 1.7vw;
@@ -151,166 +271,371 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2.2vw  2.5vw;
+    padding: 2.2vw 2.5vw;
     z-index: 2;
     transform: translateX(100%);
     opacity: 0;
 }
 
-#text4 .parts p{
+#text4 .parts p {
     margin: 1.5vw 0vw;
 
 }
-#text4 #part1 h1{
+
+#text4 #part1 h1 {
     color: rgb(90, 90, 90);
-    font-size: clamp(20px,1.5vw,25px);
+    font-size: clamp(20px, 1.5vw, 25px);
     font-weight: 200;
 }
-#text4 #part1 p{
+
+#text4 #part1 p {
     color: black;
     font-weight: 600;
-    font-size: clamp(14px,1.2vw,20px);
-    font-family: UncutSans-SemiBold ;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-family: UncutSans-SemiBold;
 }
-#text4 #part1 button{
+
+#text4 #part1 button {
     border: 1px solid rgb(97, 97, 97);
     background-color: white;
     padding: 12px 14px;
-    font-size: clamp(13px,1vw,16px);
+    font-size: clamp(13px, 1vw, 16px);
     color: rgb(99, 99, 99);
     font-family: UncutSans-Light;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor:none;
     transition: 0.2s linear;
 }
-#text4 #part1 button:hover{
+
+#text4 #part1 button:hover {
     background-color: black;
     color: white;
 }
-#text4 #part2 h1{
-    font-size: clamp(23px,1.4vw,23px);
-    font-family: UncutSans-SemiBold ;
+
+#text4 #part2 h1 {
+    font-size: clamp(23px, 1.4vw, 23px);
+    font-family: UncutSans-SemiBold;
 }
-#text4 #part2 p{
+
+#text4 #part2 p {
     font-size: 13px;
     color: rgb(0, 0, 0);
     font-family: UncutSans-SemiBold;
 }
-#text4 #part2 button{
+
+#text4 #part2 button {
     border: none;
     padding: 10px 15px;
     color: white;
     background-color: black;
     margin-top: 10px;
-    cursor: pointer;
+    cursor: none;
     font-size: 14px;
 }
 
 /* Panelism(Text5) */
 
-#panelism{
+#panelism {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 50%;
     text-align: center;
     color: white;
     opacity: 0;
 }
-#panelism h1{
+
+#panelism h1 {
     font-size: 4vw;
     font-family: UncutSans-Semibold;
 }
-#panelism #line{
+
+#panelism #line {
     display: inline-block;
     background-color: white;
     width: 1%;
     height: 6px;
 }
 
+#ourProjects {
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    padding: 12vw 0vw;
+}
+
+#headings {
+    /* background-color: red; */
+    margin-left: 40%;
+}
+
+#headings h1 {
+    font-size: 4.4vw;
+    font-size: clamp(45px, 4.4vw, 100px);
+    line-height: 5.8vw;
+    line-height: clamp(60px, 5.8vw, 120px);
+    font-family: UncutSans-Light;
+}
+
+#footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 55%;
+    display:flex;
+    justify-content: space-between;
+    padding: 0vw 3.5vw;
+    padding-top: 5vw;
+    padding-bottom: 3.5vw;
+}
+
+/* Footer Part1 */
+
+/* Element1 */
+
+#footerPart1 #elem1{
+    /* background-color: blue; */
+    width: 90%;
+}
+#elem1 h1{
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    margin-bottom: 10px;
+    font-family: UncutSans-SemiBold;
+}
+#elem1 p{
+    font-size: 14px;
+    font-family: UncutSans-Regular;
+}
+#elem1 p:nth-child(4){
+    /* background-color: red; */
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Element2 */
+#footerPart1 #elem2{
+    margin-top: 3vw;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+#elem2 h1{
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    margin-bottom: 10px;
+    font-family: UncutSans-SemiBold;
+}
+#elem2 span{
+    font-size: 13px;
+    font-family: UncutSans-Regular;
+}
+
+
+/* Footer Part2  */
+
+#footerPart2{
+    /* background-color: red; */
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+/* Element1 */
+#footerPart2 #logo svg{
+    width: 3vw;
+    height: 3vw;
+    display: block;
+    margin-bottom: 4vw;
+}
+#logo span{
+    font-size: 10px;
+    text-align:right;
+    display: block;
+    margin-bottom: 1vw;
+}
+
+/* Element2  */
+
+#footerPart2 #elem2{
+    /* background-color: rgb(80, 1, 106); */
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#elem2 h1{
+    font-size: 1.3vw;
+}
+#elem2 p{
+    font-size: 13px;
+    font-weight: 400;
+    font-family:UncutSans-Regular;
+}
+#elem2 #line2{
+    background-color: white;
+    width: 1.1vw;
+    height: 3px;
+    margin: 6px 0;
+}
+#elem2 a{
+    text-decoration: none;
+    color: white;
+    line-height: 1.1vw;
+    font-size: 14px;
+    font-family:UncutSans-Regular;
+}
 /* Responsiveness */
 
 @media (max-width:768px) {
-    #text1{
+    #cursor{
+        display: none;
+    }
+    nav{
+        background-color: rgb(255, 255, 255);
+        mix-blend-mode:normal;
+        color: black;
+        padding-right: 6vw;
+        padding-left: 4vw;
+    }
+  
+    nav #part1 span{
+        background-color: black;
+    }
+    nav #part1 #circle{
+        background-color: black;
+    }
+    nav #part2 {
+        display: none;
+    }
+
+    nav #part3 {
+        display: none;
+    }
+
+    nav #part4 {
+        display: block;
+    }
+
+
+
+    nav #part4 h1 {
+        font-size: 20px;
+    }
+
+    #text1 {
         width: 100%;
         top: 85%;
     }
-    #text2{
-        bottom: -5%;
-        gap: 30px;
+
+    #text2 {
+        bottom: -2%;
+        /* gap: 30px; */
         width: 90%;
+        /* background-color: red; */
 
     }
-    #text2  #part1{
+
+    #text2 #part1 {
         margin-top: 20px;
+        width: 60%;
     }
-    
-    #text2 #part2{
-        /* background-color: red; */
+
+    #text2 #part2 {
+        width: 100%;
+        
+    }
+
+    #text3 {
         width: 100%;
     }
-    #text3{
-        width: 100%;
-    }
-    #text3 p{
+
+    #text3 p {
         letter-spacing: 0px;
         line-height: 17px;
         margin-top: 0.3vh;
     }
-    #text4 {    
+
+    #text4 {
         width: 75%;
-        padding: 4vw  5vw;
+        padding: 4vw 5vw;
     }
 
-    #text4 #part1 button{
+    #text4 #part1 button {
         padding: 12px 14px;
     }
-    #text4 #part1 p{
-       margin-top: 10px;
-       margin-bottom: 20px;
+
+    #text4 #part1 p {
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
-    #text4 #part2 p{
+
+    #text4 #part2 p {
         margin-top: 15px;
     }
-    #panelism{
+
+    #panelism {
         width: 60%;
     }
-    #panelism h1{
+
+    #panelism h1 {
         font-size: 4.5vw;
     }
-    #panelism #line{
+
+    #panelism #line {
         height: 0.5vw;
     }
+
+    #ourProjects {
     
-    
-    
+        padding: 25vw 0vw;
+    }
+
+    #headings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+
 }
+
 @media (min-width:1800px) {
-    #text2 #part2{
+    #text2 #part2 {
         width: 35%;
     }
-    #text3{
+
+    #text3 {
         width: 55%;
     }
-    #text3 h1{
+
+    #text3 h1 {
         line-height: 57px;
         letter-spacing: 0px;
     }
-    #text3 p{
+
+    #text3 p {
         line-height: 35px;
     }
+
     #text4 {
-       width: 33%;
+        width: 33%;
     }
-    #text4 #part1 button{
+
+    #text4 #part1 button {
         padding: 14px 20px;
     }
-    #text4 #part2 p{
+
+    #text4 #part2 p {
         font-size: 19px;
-        margin: 15px 0px ;
+        margin: 15px 0px;
     }
-    #text4 #part2  button{
+
+    #text4 #part2 button {
         padding: 15px 22px;
     }
-   
+
 }
