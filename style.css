@@ -9,7 +9,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background-color: red;
+    /* background-color: red; */
 }
 
 
@@ -31,7 +31,7 @@ body {
 @font-face {
     font-family: UncutSans-SemiBold;
     src: url(Assets/Fonts/UncutSans-Semibold.woff2);
-}
+} 
 #cursor{
     position: fixed;
     top: 0;
@@ -136,7 +136,7 @@ nav #part4 {
     display: none;
 }
 
-#main {
+#mainContent{
     width: 100%;
     background-color: black;
 }
@@ -358,11 +358,21 @@ p {
     height: 6px;
 }
 
+#container{
+    width: 100%;
+    min-height: 109vh;
+    background-color: red;
+    position: relative;
+}
+
 #ourProjects {
     background-color: white;
     width: 100%;
-    min-height: 100vh;
+    height: 210vh;
     padding: 12vw 0vw;
+    position: relative;
+    top: 0;
+    z-index: 3;
 }
 
 #headings {
@@ -378,16 +388,20 @@ p {
     font-family: UncutSans-Light;
 }
 
+
+
 #footer{
     background-color: black;
     color: white;
     width: 100%;
-    height: 55%;
+    height: 54vh;
     display:flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0vw 3.5vw;
-    padding-top: 5vw;
-    padding-bottom: 3.5vw;
+    position: absolute;
+    z-index: -1;
+    top:70%;
 }
 
 /* Footer Part1 */

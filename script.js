@@ -190,7 +190,7 @@ function navBarAnimation() {
     })
 }
 navBarAnimation()
-if(window.matchMedia("(max-width: 768px)").matches){
+if (window.matchMedia("(max-width: 768px)").matches) {
     function navBarAnimation() {
         gsap.to("nav ", {
             transform: "translateY(-10%)",
@@ -229,26 +229,26 @@ if(window.matchMedia("(max-width: 768px)").matches){
     navBarAnimation()
 }
 
-function ourProjectAnimation(){
+function ourProjectAnimation() {
     document.querySelectorAll("#headings h1")
-    .forEach(function (element) {
-        gsap.from(element, {
-            scrollTrigger: {
-                trigger: element,
-                // markers: true,
-                start: "top 90%",
-                end: "bottom 20%",
-                scrub: 1,
-            },
-            opacity: 0.3,
-        });
-    })
+        .forEach(function (element) {
+            gsap.from(element, {
+                scrollTrigger: {
+                    trigger: element,
+                    // markers: true,
+                    start: "top 90%",
+                    end: "bottom 20%",
+                    scrub: 1,
+                },
+                opacity: 0.3,
+            });
+        })
 }
 ourProjectAnimation()
 
 document.documentElement.style.cursor = 'none';
 
-if(window.matchMedia("(min-width: 768px)").matches){
+if (window.matchMedia("(min-width: 768px)").matches) {
     function cursorAnimation() {
         let cursor = document.querySelector("#cursor")
         let cursorScale = document.querySelectorAll(".cursorScale")
@@ -279,11 +279,20 @@ if(window.matchMedia("(min-width: 768px)").matches){
                 });
             });
         });
-    
+
     }
     cursorAnimation()
-    
+
 }
 
-
-
+gsap.to("#ourProjects",{
+    top:"-85%",
+    scrollTrigger: {
+        trigger: "#footer",
+        start: "top-=90% top",
+        end: "bottom bottom-=70%",
+        scrub: 2,
+        markers: true,
+        pin:true,
+    },
+})
