@@ -285,14 +285,26 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 
 }
 
+let Yvalue
+if(window.innerWidth > 768){
+    Yvalue = "-140%"
+}
+else if((window.innerWidth <= 768) && (window.innerwidth > 450)){
+    Yvalue = "-75%"
+}
+else if(window.innerWidth <=450){
+    Yvalue = "-500%"
+}
+
 gsap.to("#ourProjects",{
-    top:"-85%",
     scrollTrigger: {
         trigger: "#footer",
-        start: "top-=90% top",
-        end: "bottom bottom-=70%",
-        scrub: 2,
-        markers: true,
+        start: window.innerWidth <= 450 ? "top top" : "top-=90% top",
+        end: window.innerWidth <=450 ? "bottom bottom-=50%" : "bottom bottom-=70%",
+        scrub: 1,
         pin:true,
+        pinSpacing: false,
     },
+    y:Yvalue,
+    ease:"none"
 })
