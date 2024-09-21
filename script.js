@@ -7,7 +7,7 @@ const frames = {
 }
 let imageLoaded = 0;
 let images = [];
-function preloadImage() {
+function preloadCanvasImage() {
     for (var i = 1; i <= frames.maxIndex; i++) {
         const imgUrl = `./Assets/Frames/frame_${i.toString().padStart(4, "0")}.jpg`
         let img = new Image()
@@ -116,7 +116,7 @@ function startAnimation() {
 window.addEventListener("resize", function () {
     loadImage(Math.floor(frames.currentIndex))
 })
-preloadImage()
+preloadCanvasImage()
 
 
 function showDayTime() {
@@ -290,7 +290,6 @@ function footerAnimation() {
     if (window.innerWidth > 768) {
         Yvalue = "-140%"
     }
-
     else if (window.innerWidth <= 450) {
         Yvalue = "-500%"
     }
@@ -303,10 +302,10 @@ function footerAnimation() {
             scrub: 1,
             pin: true,
             pinSpacing: false,
+            // markers:true,
         },
         y: Yvalue,
         ease: "none"
     })
 }
 footerAnimation()
-window.addEventListener('resize', footerAnimation);

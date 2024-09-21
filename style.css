@@ -31,8 +31,37 @@ body {
 @font-face {
     font-family: UncutSans-SemiBold;
     src: url(Assets/Fonts/UncutSans-Semibold.woff2);
-} 
-#cursor{
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+    z-index: 100;
+    color: white;
+    font-family: UncutSans-Regular;
+    transition: all .7s cubic-bezier(.73, .29, 0, 1);
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 0vw 3vw;
+    /* background-color: yellow; */
+}
+
+.loader-content {
+    width: 22%;
+    height: fit-content;
+    text-align: right;
+    /* background-color: red; */
+}
+
+.progress-text {
+    font-size: 12vw;
+}
+
+#cursor {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,6 +74,7 @@ body {
     transform: scale(1);
     pointer-events: none;
 }
+
 nav {
     position: fixed;
     width: 100%;
@@ -63,7 +93,7 @@ nav {
 nav .parts {
     opacity: 1;
     /* background-color: red; */
-    
+
 }
 
 nav #part1 {
@@ -110,7 +140,7 @@ nav #part2 a {
     font-size: 1.3vw;
     /* background-color: red; */
     margin-left: 3px;
-    cursor:none;
+    cursor: none;
 }
 
 
@@ -136,7 +166,7 @@ nav #part4 {
     display: none;
 }
 
-#mainContent{
+#mainContent {
     width: 100%;
     background-color: black;
 }
@@ -303,7 +333,7 @@ p {
     color: rgb(99, 99, 99);
     font-family: UncutSans-Light;
     /* cursor: pointer; */
-    cursor:none;
+    cursor: none;
     transition: 0.2s linear;
 }
 
@@ -358,7 +388,7 @@ p {
     height: 6px;
 }
 
-#container{
+#container {
     width: 100%;
     min-height: 100vh;
     background-color: rgb(0, 0, 0);
@@ -390,18 +420,18 @@ p {
 
 
 
-#footer{
+#footer {
     background-color: black;
     color: white;
     width: 100%;
     height: 55vh;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0vw 3.5vw;
     position: absolute;
     z-index: 2;
-    top:70%;
+    top: 70%;
 }
 
 /* Footer Part1 */
@@ -411,40 +441,45 @@ p {
     background-color: blue;
     height: 40%;
 } */
-#footerPart1 #elem1{
+#footerPart1 #elem1 {
     /* background-color: blue; */
     width: 90%;
 }
-#elem1 h1{
+
+#elem1 h1 {
     text-transform: uppercase;
     font-size: 1.3vw;
     margin-bottom: 10px;
     font-family: UncutSans-SemiBold;
 }
-#elem1 p{
+
+#elem1 p {
     font-size: 14px;
     font-family: UncutSans-Regular;
 }
-#elem1 p:nth-child(4){
+
+#elem1 p:nth-child(4) {
     /* background-color: red; */
     margin-top: 15px;
     font-style: italic;
 }
 
 /* Element2 */
-#footerPart1 #elem2{
+#footerPart1 #elem2 {
     margin-top: 3vw;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
 }
-#elem2 h1{
+
+#elem2 h1 {
     text-transform: uppercase;
     font-size: 1.3vw;
     margin-bottom: 10px;
     font-family: UncutSans-SemiBold;
 }
-#elem2 span{
+
+#elem2 span {
     font-size: 13px;
     font-family: UncutSans-Regular;
 }
@@ -452,9 +487,9 @@ p {
 
 /* Footer Part2  */
 
-#footerPart2{
+#footerPart2 {
     /* background-color: red; */
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     /* justify-content: space-between; */
@@ -462,68 +497,77 @@ p {
 }
 
 /* Element1 */
-#footerPart2 #logo svg{
+#footerPart2 #logo svg {
     width: 3vw;
     height: 3vw;
     display: block;
     margin-bottom: 4vw;
 }
-#logo span{
+
+#logo span {
     font-size: 10px;
-    text-align:right;
+    text-align: right;
     display: block;
     margin-bottom: 1vw;
 }
 
 /* Element2  */
 
-#footerPart2 #elem2{
+#footerPart2 #elem2 {
     /* background-color: rgb(80, 1, 106); */
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-#elem2 h1{
+
+#elem2 h1 {
     font-size: 1.3vw;
 }
-#elem2 p{
+
+#elem2 p {
     font-size: 13px;
     font-weight: 400;
-    font-family:UncutSans-Regular;
+    font-family: UncutSans-Regular;
 }
-#elem2 #line2{
+
+#elem2 #line2 {
     background-color: white;
     width: 1.1vw;
     height: 3px;
     margin: 6px 0;
 }
-#elem2 a{
+
+#elem2 a {
     text-decoration: none;
     color: white;
     line-height: 1.1vw;
     font-size: 14px;
-    font-family:UncutSans-Regular;
+    font-family: UncutSans-Regular;
 }
+
 /* Responsiveness */
 
 @media (max-width:768px) {
-    #cursor{
+    #cursor {
         display: none;
     }
-    nav{
+
+    nav {
         background-color: rgb(255, 255, 255);
-        mix-blend-mode:normal;
+        mix-blend-mode: normal;
         color: black;
         padding-right: 6vw;
         padding-left: 4vw;
     }
-  
-    nav #part1 span{
+
+    nav #part1 span {
         background-color: black;
     }
-    nav #part1 #circle{
+
+    nav #part1 #circle {
         background-color: black;
     }
+
     nav #part2 {
         display: none;
     }
@@ -562,7 +606,7 @@ p {
 
     #text2 #part2 {
         width: 100%;
-        
+
     }
 
     #text3 {
@@ -604,14 +648,15 @@ p {
     #panelism #line {
         height: 0.5vw;
     }
-    
+
     #headings {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 0;
     }
-    #container{
+
+    #container {
         min-height: 100vh
     }
 
@@ -620,83 +665,102 @@ p {
         width: 100%;
         height: fit-content;
     }
-    #footer{
-       display: none;
+
+    #footer {
+        display: none;
     }
 
 
 }
-@media (max-width:450px){
-    #container{
-        height: 150vh;
+
+@media (max-width:450px) {
+    .loader-content{
+        width: 52%;
+        margin: 15vw 0vw;
     }
+    .progress-text {
+        font-size: 27vw;
+    }
+
+    #container {
+        height: 140vh;
+        /* background-color: blue; */
+    }
+
     #ourProjects {
         padding: 15vw 0vw;
         /* background-color: rgb(208, 9, 248);   */
         width: 100%;
         height: fit-content;
     }
-  
-    #footer{
-        top:30%;
+
+    #footer {
+        top: 0%;
         height: 100vh;
-        display:flex;
+        display: flex;
         flex-direction: column;
-        justify-content:baseline;
+        justify-content: baseline;
         align-items: baseline;
         padding: 0vw 3.5vw;
         gap: 0vw;
         background-color: rgb(0, 0, 0);
     }
-    #footerPart1{
+
+    #footerPart1 {
         /* background-color: blueviolet; */
         height: fit-content;
     }
-    #footerPart1 #elem1{
+
+    #footerPart1 #elem1 {
         /* background-color: blue; */
         height: fit-content;
         padding-top: 30vw;
         padding-bottom: 10vw;
     }
-    #elem1 h1{
+
+    #elem1 h1 {
         font-size: 6vw;
         margin-bottom: 15px;
     }
-    #elem1 p{
+
+    #elem1 p {
         font-size: 16px;
         font-family: UncutSans-Regular;
     }
-    #elem1 p:nth-child(4){
+
+    #elem1 p:nth-child(4) {
         margin-top: 20px;
         font-size: 20px;
     }
-    
+
     /* Element2 */
-   
-    #footerPart1 #elem2{
+
+    #footerPart1 #elem2 {
         margin-top: 0vw;
-        padding-top:0vw ;
-        padding-bottom:20vw;
+        padding-top: 0vw;
+        padding-bottom: 20vw;
         height: fit-content;
         /* background-color: rgb(255, 0, 85); */
-        
+
     }
-    #footerPart1  #elem2 h1{
+
+    #footerPart1 #elem2 h1 {
         font-size: 6vw;
         margin-bottom: 10px;
-       
+
     }
-    #elem2 span{
+
+    #elem2 span {
         font-size: 18px;
         font-family: UncutSans-Regular;
     }
-    
-    
+
+
     /* Footer Part2  */
-    
-    #footerPart2{
+
+    #footerPart2 {
         /* background-color: red; */
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: baseline;
         /* justify-content: space-between; */
@@ -704,42 +768,49 @@ p {
         width: 100%;
         height: 41vh;
     }
-    
+
     /* Element1 */
-    #footerPart2 #logo svg{
+    #footerPart2 #logo svg {
         width: 10vw;
         height: 10vw;
         display: block;
         margin-bottom: 10vw;
     }
-    #logo span{
+
+    #logo span {
         font-size: 20px;
-        text-align:left;
+        text-align: left;
         margin-bottom: 5vw;
     }
-    
+
     /* Element2  */
-    
-    #footerPart2 #elem2{
+
+    #footerPart2 #elem2 {
         /* background-color: rgb(80, 1, 106); */
-        
+
         align-items: baseline;
     }
-    #elem2 h1{
+
+    #elem2 h1 {
         font-size: 3vw;
         margin-bottom: 5px;
     }
-    #elem2 p{
+
+    #elem2 p {
         font-size: 13px;
     }
-    #elem2 #line2{
+
+    #elem2 #line2 {
         width: 5vw;
     }
-    #elem2 a{
+
+    #elem2 a {
         line-height: 4vw;
         font-size: 14px;
     }
 }
+
+
 
 @media (min-width:1800px) {
     #text2 #part2 {

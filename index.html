@@ -4,133 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Doze Studio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Assets/Images/squareIcon.png" type="png">
 </head>
 
 <body>
-    <div id="cursor"></div>
-    <nav>
-        <div id="part1" class="parts">
-            <h1 class="cursorScale navItems">Doze <span id="#line"></span>Studio</h1>
-            <div id="circle" class="cursorScale navItems"></div>
+    <div class="preloader">
+        <div class="loader-content">
+            <div class="progress-text">0</div>
         </div>
-        <div id="part2" class="parts">
-            <a href="" class="cursorScale navSubheading navItems">Projects,</a>
-            <a href="" class="cursorScale navSubheading navItems">About,</a>
-            <a href="" class="cursorScale navSubheading navItems">Labs</a>
-        </div>
-        <div id="part3" class="parts">
-            <div id="daytime" class="navItems">
-                <span id="day"></span>
-                <span id="time"></span>
-            </div>
-            <h1 class="cursorScale navItems">Let's Talk</h1>
-        </div>
-        <div id="part4" class="parts">
-            <h1>Menu</h1>
-        </div>
-    </nav>
-    <div id="mainContent">
-        <div id="parent">
-            <div id="child">
-                <canvas id="canvas"></canvas>
-                <div id="text1">
-                    <h1 id="heading1">&copy; 2024 Doze.Std</h1>
-                    <h1 id="heading2">Shaping brands → Crafting motion →</h1>
-                </div>
-                <div id="text2">
-                    <div id="part1">
-                        <h1>Transforming Visions</h1>
-                    </div>
-                    <div id="part2">
-                        <p>Building identity and inspiring action. Sculpting digital experiences that resonate.</p>
-                    </div>
-                </div>
-                <div id="text3">
-                    <h1>Elevating Aesthetics</h1>
-                    <p>Crafting solutions and exploring new horizons. Evolving narratives and elevating aesthetics in
-                        every project.</p>
-                </div>
-                <div id="text4">
-                    <div id="part1" class="parts">
-                        <h1>&copy; 2024 Doze.Std</h1>
-                        <p>Sculpting Digital Transforming visions into digital realities. Weaving stories that captivate
-                            and innovate. Exploring new possibilities with a focus on narrative evolution. Crafting
-                            solutions that engage and elevate.</p>
-                        <button>Get Reviews →</button>
-                    </div>
-                    <div id="part2" class="parts">
-                        <h1>Innovating Design</h1>
-                        <p>Connecting ideas to foster creativity. Designing impactful experiences that resonate. Feel
-                            free to mix and match these sections to suit your website's design needs!</p>
-                        <button>Experience</button>
-                    </div>
-                </div>
-                <div id="panelism">
-                    <h1> &copy; Panelism <span id="line"></span> 2048</h1>
-                </div>
-            </div>
-        </div>
-        <div id="container">
-            <div id="ourProjects">
-                <div id="headings">
-                    <h1>Mustela</h1>
-                    <h1>A24 - WYFSTW</h1>
-                    <h1>CM | Equity</h1>
-                    <h1>Citroën ë-C3</h1>
-                    <h1>Dampa</h1>
-                    <h1>Torticolia</h1>
-                    <h1>Farcry 6</h1>
-                    <h1>Perspective Fund</h1>
-                    <h1>Martin Solveig</h1>
-                    <h1>Nope Collectif</h1>
-                    <h1>Heiwa</h1>
-                    <h1>Alltta Curio</h1>
-                    <h1>Mobil M</h1>
-                    <h1>Nothing Ear</h1>
-                </div>
-            </div>
-            <div id="footer">
-                <div id="footerPart1">
-                    <div id="elem1">
-                        <h1>Project Inquires</h1>
-                        <p>Ready to work with us ?</p>
-                        <p> Reach out to discuss how we can help you build a strong digital brand presence.</p>
-                        <p>hello@doze-studio.com</p>
-                    </div>
-                    <div id="elem2">
-                        <h1>Our Office</h1>
-                        <span>Doze Studio</span>
-                        <span>1b rue Baron</span>
-                        <span>44 000 Nantes</span>
-                        <span>France</span>
-                    </div>
-                </div>
-                <div id="footerPart2">
-                    <div id="logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="white" id="footer__logo">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M56 0H0V56H56V0ZM6.5 46.5V31.5H21.5L6.5 46.5ZM25 35V50.5H10L25 35ZM6 6H25V25H6V6ZM41.5 26C47.299 26 52 21.299 52 15.5C52 9.70101 47.299 5 41.5 5C35.701 5 31 9.70101 31 15.5C31 21.299 35.701 26 41.5 26ZM32 32H50V38H32V32ZM50 44H32V50H50V44Z">
-                            </path>
-                        </svg>
-                        <span>Legals</span>
-                    </div>
-        
-                    <div id="elem2">
-                        <h1>Networks</h1>
-                        <p>+33 2 85 52 19 62</p>
-                        <span id="line2"></span>
-                        <a href="">Instagram</a>
-                        <a href="">Linkedin</a>
-                        <a href="">Giphy</a>
-                    </div>
-        
-                </div>
-            </div>
-        </div>
-
     </div>
+    <main>  
+        <div id="cursor"></div>
+        <nav>
+            <div id="part1" class="parts">
+                <h1 class="cursorScale navItems">Doze <span id="#line"></span>Studio</h1>
+                <div id="circle" class="cursorScale navItems"></div>
+            </div>
+            <div id="part2" class="parts">
+                <a href="" class="cursorScale navSubheading navItems">Projects,</a>
+                <a href="" class="cursorScale navSubheading navItems">About,</a>
+                <a href="" class="cursorScale navSubheading navItems">Labs</a>
+            </div>
+            <div id="part3" class="parts">
+                <div id="daytime" class="navItems">
+                    <span id="day"></span>
+                    <span id="time"></span>
+                </div>
+                <h1 class="cursorScale navItems">Let's Talk</h1>
+            </div>
+            <div id="part4" class="parts">
+                <h1>Menu</h1>
+            </div>
+        </nav>
+        <div id="mainContent">
+            <div id="parent">
+                <div id="child">
+                    <canvas id="canvas"></canvas>
+                    <div id="text1">
+                        <h1 id="heading1">&copy; 2024 Doze.Std</h1>
+                        <h1 id="heading2">Shaping brands → Crafting motion →</h1>
+                    </div>
+                    <div id="text2">
+                        <div id="part1">
+                            <h1>Transforming Visions</h1>
+                        </div>
+                        <div id="part2">
+                            <p>Building identity and inspiring action. Sculpting digital experiences that resonate.</p>
+                        </div>
+                    </div>
+                    <div id="text3">
+                        <h1>Elevating Aesthetics</h1>
+                        <p>Crafting solutions and exploring new horizons. Evolving narratives and elevating aesthetics in
+                            every project.</p>
+                    </div>
+                    <div id="text4">
+                        <div id="part1" class="parts">
+                            <h1>&copy; 2024 Doze.Std</h1>
+                            <p>Sculpting Digital Transforming visions into digital realities. Weaving stories that captivate
+                                and innovate. Exploring new possibilities with a focus on narrative evolution. Crafting
+                                solutions that engage and elevate.</p>
+                            <button>Get Reviews →</button>
+                        </div>
+                        <div id="part2" class="parts">
+                            <h1>Innovating Design</h1>
+                            <p>Connecting ideas to foster creativity. Designing impactful experiences that resonate. Feel
+                                free to mix and match these sections to suit your website's design needs!</p>
+                            <button>Experience</button>
+                        </div>
+                    </div>
+                    <div id="panelism">
+                        <h1> &copy; Panelism <span id="line"></span> 2048</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="container">
+                <div id="ourProjects">
+                    <div id="headings">
+                        <h1>Mustela</h1>
+                        <h1>A24 - WYFSTW</h1>
+                        <h1>CM | Equity</h1>
+                        <h1>Citroën ë-C3</h1>
+                        <h1>Dampa</h1>
+                        <h1>Torticolia</h1>
+                        <h1>Farcry 6</h1>
+                        <h1>Perspective Fund</h1>
+                        <h1>Martin Solveig</h1>
+                        <h1>Nope Collectif</h1>
+                        <h1>Heiwa</h1>
+                        <h1>Alltta Curio</h1>
+                        <h1>Mobil M</h1>
+                        <h1>Nothing Ear</h1>
+                    </div>
+                </div>
+                <div id="footer">
+                    <div id="footerPart1">
+                        <div id="elem1">
+                            <h1>Project Inquires</h1>
+                            <p>Ready to work with us ?</p>
+                            <p> Reach out to discuss how we can help you build a strong digital brand presence.</p>
+                            <p>hello@doze-studio.com</p>
+                        </div>
+                        <div id="elem2">
+                            <h1>Our Office</h1>
+                            <span>Doze Studio</span>
+                            <span>1b rue Baron</span>
+                            <span>44 000 Nantes</span>
+                            <span>France</span>
+                        </div>
+                    </div>
+                    <div id="footerPart2">
+                        <div id="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="white" id="footer__logo">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M56 0H0V56H56V0ZM6.5 46.5V31.5H21.5L6.5 46.5ZM25 35V50.5H10L25 35ZM6 6H25V25H6V6ZM41.5 26C47.299 26 52 21.299 52 15.5C52 9.70101 47.299 5 41.5 5C35.701 5 31 9.70101 31 15.5C31 21.299 35.701 26 41.5 26ZM32 32H50V38H32V32ZM50 44H32V50H50V44Z">
+                                </path>
+                            </svg>
+                            <span>Legals</span>
+                        </div>
+            
+                        <div id="elem2">
+                            <h1>Networks</h1>
+                            <p>+33 2 85 52 19 62</p>
+                            <span id="line2"></span>
+                            <a href="">Instagram</a>
+                            <a href="">Linkedin</a>
+                            <a href="">Giphy</a>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
 
 
@@ -141,6 +149,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="preloaderScript.js"></script>
     <script src="script.js"></script>
 </body>
 
