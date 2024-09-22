@@ -1,4 +1,4 @@
-# Doze Studio Frame Sequence Animation
+# Doze Studio
 
 This project showcases an interactive and engaging animation for Doze Studio using a sequence of images. The website is developed using HTML, CSS, and JavaScript, with the GSAP library integrated for smooth scrolling and animations. It provides a visually appealing and dynamic user experience as viewers scroll through the webpage to explore Doze Studio's work.
 
